@@ -1,0 +1,2 @@
+//APOS UM FRAME DSE DESTROI
+alarm[0] = 1;
