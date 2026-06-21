@@ -59,7 +59,7 @@ function player_movimento(){
 		spd = 0;
 	}
 	
-	#region CORRIDA
+	#region INCOMPLETE__CORRIDA
 	//SISTEMA DE CORRIDA
 	//APERTAR ALT PRA CORRER
 	
@@ -69,15 +69,9 @@ function player_movimento(){
 	vspd = lengthdir_y(spd , inputDirection);
 	
 	#endregion
-	 #region SPRITESS
+	 #region SPRITE_CHANGE
 	 
-	 if _atkButton{
-		 //canAttack FICA TRUE
-		SpriteChange(true);	 
-		ataque = true;
-		estado = player_ataque;
-		
-	 } else SpriteChange(false);
+	
 	
 	
 	#endregion
@@ -92,7 +86,7 @@ function player_movimento(){
 	
 	if _dashButton && stamina >= 15{
 		//SE A STAMINA FOR MAIOR QUE 15
-		dash_dir = point_direction(_playerX, _playerY, mouse_x, mouse_y);
+		dash_dir = point_direction(_playerX, _playerY, mouse_x, mouse_y); 
 		//TEMPO QUE VAI DURAR O DASH
 		alarm[0] = 5;
 		//TEMPO PARA REGENERAR A STAMINA: 3s
@@ -105,17 +99,19 @@ function player_movimento(){
 	player_colisao();
 	//CORRECÇÃO --> UHH, APENAS DEFINIR A FUNC DE COLISAO
 
-#endregion	
+	#endregion	
 	
 	
 	#region ATAQUE 
-	//SE PRESSIONAR O BOTAO DE ATAQUE
-	/*if _atkButton{
+	 if _atkButton && stamina >= 5{
+		 //canAttack FICA TRUE
+		SpriteChange(true);	 
+		ataque = true;
+		alarm[1] = 180;
+		stamina -= 5;
+		estado = player_ataque;
 		
-		HitboxCreate(32);
-		
-		
-	}*/
+	 } else SpriteChange(false);
 	
 	#endregion
 }

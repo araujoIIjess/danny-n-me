@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"danny n' me",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -48,6 +48,7 @@
   },
   "name":"danny n' me",
   "resources":[
+    {"id":{"name":"f_slime","path":"fonts/f_slime/f_slime.yy",},},
     {"id":{"name":"obj_bigSlime","path":"objects/obj_bigSlime/obj_bigSlime.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_parede","path":"objects/obj_parede/obj_parede.yy",},},

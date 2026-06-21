@@ -6,6 +6,14 @@ function enemy_mudar_estado(){
 	}else if _nextState == enemy_idle{
 		estado = enemy_idle;	
 	}
+	var _xx = obj_player.x;
+	var _yy = obj_player.y;
+	var _playerDist = point_distance(_xx, _yy, x, y);
+	if _playerDist < slime_aggr_dist{
+		
+		estado = enemy_perseguindo;
+		
+	}
 	 
 	
 	
@@ -50,7 +58,7 @@ function enemy_movement(){
 	
 	
 	//DISTANCIA DO PONTO
-	var _dist = distance_to_point(random_x , random_y);
+	var _dist = distance_to_point(random_x, random_y);
 	image_speed = 1;
 	
 	//SE A DISTANCIA FOR MENOR QUE A VELOCIDADE ELE SE DESCOLA ATE O PONTO
@@ -63,12 +71,9 @@ function enemy_movement(){
 		vspd = lengthdir_y(slime_spd , _moveDir);
 		//SE ESTIVER PERTO DA PAREDE
 		//ELE VIRA-SE, E CONTINUA A ANDAR
-		
-		
 		enemy_collisions();
 	}
-	#region MUDANDO A DIREÇAO ANTES DE COLIDIR
-	#endregion
+	
 
 }
 
@@ -81,6 +86,20 @@ function enemy_idle(){
 	
 }
 	
-function enemy_chasing(){
+function enemy_hit(){
+	slime_knockSpd = lerp(slime_knockSpd, 0, 0.05);
+	hspd = lengthdir_x(slime_knockSpd, slime_knockDir);
+	vspd = lengthdir_y(slime_knockSpd, slime_knockDir);
 	
+	enemy_collisions();
+	
+}
+
+function enemy_perseguindo(){
+		var _playerx = obj_player.x;
+		var _playery = obj_player.y;
+		var _dir_To_player = point_direction(x, y, _playerx, _playery);
+		hspd = lengthdir_x(slime_spd, _dir_To_player);
+		vspd = lengthdir_y(slime_spd, _dir_To_player);
+		enemy_collisions();
 }

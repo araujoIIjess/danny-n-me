@@ -26,6 +26,8 @@ dash_spd = 15;
 #region ATAQUE
 
 ataque = false;
+//QUANDO HOUVER O SISTEMA DE NIVEIS, player_atkDmg SERÁ ARRAY
+player_atkDmg = 10;
 
 #endregion
 
