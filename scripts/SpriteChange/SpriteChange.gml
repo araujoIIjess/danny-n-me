@@ -58,7 +58,7 @@ function SpriteChange(_canAttack = false){
 	if _playerHspd == 0 && _playerVspd == 0{
 		
 		_idle = true; _walk = false;
-		show_debug_message("IDLE"+string(_idle));
+		//show_debug_message("IDLE"+string(_idle));
 		
 		switch(_mouseDir){
 			
@@ -74,7 +74,7 @@ function SpriteChange(_canAttack = false){
 		//SE ESTIVER EM MOVIMENTO
 		//EXECUTA ANIMAÇAO DE WALK
 		_walk = true; _idle = false;
-		show_debug_message("MOV"+string(_walk));
+		//show_debug_message("MOV"+string(_walk));
 		
 		switch(_mouseDir){
 			case 1: sprite_index = _playerSprite.walk[0]; break;

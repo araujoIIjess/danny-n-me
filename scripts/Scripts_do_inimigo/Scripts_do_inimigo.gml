@@ -9,18 +9,34 @@ function enemy_mudar_estado(){
 	var _xx = obj_player.x;
 	var _yy = obj_player.y;
 	var _playerDist = point_distance(_xx, _yy, x, y);
+	
 	if _playerDist < slime_aggr_dist{
 		
 		estado = enemy_perseguindo;
-		
 	}
-	 
+	if _playerDist < slime_aggr_dist && slime_dash == false && slime_dash_cooldown <= 0{
+		alarm[2] = 10;
+		slime_dash = true;
+		slime_dash_dir = point_direction(_xx, _yy, x, y);
+		estado = enemy_dash;
+	}
+		
+		/*if slime_dash == false{
+			slime_dash = true
+			alarm[2] = 10;
+			var _dir = point_direction(_xx, _yy, x, y);
+			hspd = lengthdir_x(slime_dash_spd, _dir);
+			vspd = lengthdir_y(slime_dash_spd, _dir);
+			enemy_collisions();
+		
+	}*/
 	
 	
 	
 	
 	
 }
+
 
 //ESTADO DE MOVIMENTO
 function enemy_collisions(){
@@ -98,8 +114,18 @@ function enemy_hit(){
 function enemy_perseguindo(){
 		var _playerx = obj_player.x;
 		var _playery = obj_player.y;
+		show_debug_message("CHASE");
 		var _dir_To_player = point_direction(x, y, _playerx, _playery);
-		hspd = lengthdir_x(slime_spd, _dir_To_player);
-		vspd = lengthdir_y(slime_spd, _dir_To_player);
+		hspd = lengthdir_x(slime_aggr_spd, _dir_To_player);
+		vspd = lengthdir_y(slime_aggr_spd, _dir_To_player);
 		enemy_collisions();
+}
+
+function enemy_dash(){
+	//SE MOVE EM DIRECÇAO AO JOGADOR
+	show_debug_message("DASH")
+	hspd = lengthdir_x(slime_dash_spd, slime_dash_dir);
+	vspd = lengthdir_y(slime_dash_spd, slime_dash_dir);
+	enemy_collisions();
+	
 }
