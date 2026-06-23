@@ -31,6 +31,12 @@ player_atkDmg = 10;
 
 #endregion
 
+#region HIT
+hit = false;//INTERRUPTOR
+player_knockback_spd = 0;//VELOCIDADE DO KNOCKBACK
+player_knockback_dir = 0;//DIREÇAO DO KNOCKBACK
+#endregion
+
 max_vida = 20;
 vida = max_vida;
 

@@ -17,7 +17,7 @@ function enemy_mudar_estado(){
 	if _playerDist < slime_aggr_dist && slime_dash == false && slime_dash_cooldown <= 0{
 		alarm[2] = 10;
 		slime_dash = true;
-		slime_dash_dir = point_direction(_xx, _yy, x, y);
+		slime_dash_dir = point_direction(x, y, _xx, _yy);//FIXED:23/06/26
 		estado = enemy_dash;
 	}
 		
