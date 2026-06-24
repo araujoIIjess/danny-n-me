@@ -1,0 +1,41 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"ts_grasslands",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"Relva/chão","closed_edge":false,"name":"Relva/chão","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[219,289,286,189,199,229,0,188,196,343,220,190,249,248,250,223,],},
+    {"$GMAutoTileSet":"","%Name":"Relva/água","closed_edge":false,"name":"Relva/água","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[219,470,466,373,380,410,0,372,376,0,406,375,378,462,465,408,],},
+  ],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"ts_grasslands",
+  "out_columns":29,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Conjuntos de tiles",
+    "path":"folders/Conjuntos de tiles.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_grasslands",
+    "path":"sprites/spr_grasslands/spr_grasslands.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":870,
+}
