@@ -59,27 +59,13 @@ function player_movimento(){
 		spd = 0;
 	}
 	
-	#region INCOMPLETE__CORRIDA
-	//SISTEMA DE CORRIDA
-	//APERTAR ALT PRA CORRER
-	
 	#endregion
 
 	hspd = lengthdir_x(spd , inputDirection);
 	vspd = lengthdir_y(spd , inputDirection);
 	
 	#endregion
-	 #region SPRITE_CHANGE
-	 
-	
-	
-	
-	#endregion
-	/*if hspd == 0 && vspd == 0{
-		
-	}*/
-	
-	#endregion
+
 	
 	#region DASH
 	//ENTRANDO NO ESTADO DE DASH
@@ -152,4 +138,11 @@ function player_ataque(){
 		estado = player_movimento;
 	}
 	
+}
+	
+function player_hit(){
+	//VELOCIDADES DO KNOCKBACK
+	hspd = lengthdir_x(player_knockback_spd, player_knockback_dir);
+	vspd = lengthdir_y(player_knockback_spd, player_knockback_dir);
+	player_colisao();
 }

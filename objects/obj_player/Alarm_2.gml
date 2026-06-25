@@ -1,1 +1,8 @@
 ///@description TEMPO DO KNOCKBACK
+//MAS COM AS VELOCIDADES ZERADAS
+hspd = 0;
+vspd = 0;
+//QUANDO O ALARME ACABAR VOLTA AO ESTADO INICIAL
+estado = player_movimento;
+//E SEM ESTAR NO ESTADO DE HIT
+hit = false;

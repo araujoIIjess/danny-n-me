@@ -1,0 +1,5 @@
+///@description TEMPO DE INVULNERABILIDADE
+//SE ESTIVER INVULNERAVEL NÃO TOMA DANO
+//MAS AINDA É SUSCETÍVEL AO KNOCKBACK
+hit_cooldown = false;
+show_debug_message("INV");
