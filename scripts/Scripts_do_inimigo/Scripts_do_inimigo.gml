@@ -1,6 +1,6 @@
 function enemy_mudar_estado(){
 	//VARIAVEL Q VAI DETERMINAR O PROXIMO ESTADO
-	/*var _nextState = choose(enemy_movement , enemy_idle);
+	var _nextState = choose(enemy_movement , enemy_idle);
 	if _nextState == enemy_movement{
 		estado = enemy_movement;
 	}else if _nextState == enemy_idle{
@@ -15,11 +15,12 @@ function enemy_mudar_estado(){
 		estado = enemy_perseguindo;
 	}
 	if _playerDist < slime_aggr_dist && slime_dash == false && slime_dash_cooldown <= 0{
-		alarm[2] = 10;
+		//TEMPO DE DURAÇAO DO DASH
+		alarm[2] = 12;
 		slime_dash = true;
 		slime_dash_dir = point_direction(x, y, _xx, _yy);//FIXED:23/06/26
 		estado = enemy_dash;
-	}*/
+	}
 		
 /*if slime_dash == false{
 slime_dash = true

@@ -49,7 +49,7 @@ function player_movimento(){
 			/*stamina -= 10;*/
 		}else{
 			//SE NAO ESTIVER A CORRER ANDA
-			spd = 3;	
+			spd = 5;	
 		}
 		
 		//DIRECÇOES DO MOVIMENTO

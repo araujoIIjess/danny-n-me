@@ -1,6 +1,6 @@
 ///@description TEMPO DO DASH
 slime_dash = false;
-slime_dash_cooldown = cooldown;
+estado = enemy_mudar_estado;
+slime_dash_cooldown = cooldown[index];
 hspd = 0;
 vspd = 0;
-estado = enemy_mudar_estado;
