@@ -1,8 +1,8 @@
 function player_colisao(){
 	//SE COLIDIR FICA PARADO
-	if place_meeting(x + hspd , y , obj_parede){
+	if place_meeting(x + hspd , y , par_collisores){
 		//VERIFICAÇAO DE ESPAÇO ATE A COLISAO
-		while !place_meeting(x + sign(hspd) , y , obj_parede){
+		while !place_meeting(x + sign(hspd) , y , par_collisores){
 			x += sign(hspd)	
 		}
 		hspd = 0;
@@ -11,8 +11,8 @@ function player_colisao(){
 	x += hspd;
 	
 	//COLISAO NA VERTICAL
-	if place_meeting(x , y + vspd , obj_parede){
-		while !place_meeting(x , y + sign(vspd) , obj_parede){
+	if place_meeting(x , y + vspd , par_collisores){
+		while !place_meeting(x , y + sign(vspd) , par_collisores){
 			y += sign(vspd);
 		}
 		vspd = 0;	
@@ -44,12 +44,13 @@ function player_movimento(){
 	yDir = _baixo - _cima;
 
 	if xDir != 0 || yDir != 0{//SE FOR 1 OU - 1 SE MOVE
-		if _runButton{
-			spd = 10;
+		if _runButton && stamina > 5{
+			spd = 4;
+			stamina -= 5;
 			/*stamina -= 10;*/
 		}else{
 			//SE NAO ESTIVER A CORRER ANDA
-			spd = 5;	
+			spd = 2;	
 		}
 		
 		//DIRECÇOES DO MOVIMENTO
@@ -89,12 +90,12 @@ function player_movimento(){
 	
 	
 	#region ATAQUE 
-	 if _atkButton && stamina >= 5{
+	 if _atkButton && stamina >= 3{
 		 //canAttack FICA TRUE
 		SpriteChange(true);	 
 		ataque = true;
 		alarm[1] = 180;
-		stamina -= 5;
+		stamina -= 3;
 		estado = player_ataque;
 		
 	 } else SpriteChange(false);

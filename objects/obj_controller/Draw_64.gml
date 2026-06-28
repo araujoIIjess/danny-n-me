@@ -11,11 +11,13 @@ var _guiA = display_get_gui_height();
 //LUGAR EM QUE VAI FICAR A GUI
 var _hudA = _guiA - _sprA;
 
-var _maxVida = obj_player.max_vida;
+var _playerLevel = obj_player.player_level;
+
+var _maxVida = obj_player.max_vida[_playerLevel];
 var _vida = obj_player.vida;
 
-var _maxStamina = obj_player.max_stamina;
-var _stamina = obj_player.stamina
+var _maxStamina = obj_player.max_stamina[_playerLevel];
+var _stamina = obj_player.stamina;
 
 //BARRA DE STAMINA
 //O y É _hudA + 24 POIS PARA DESENHAR O SPRITE DA ESTAMINA SE DESCEM 8 PIXEIS NO SPRITE DO HUD

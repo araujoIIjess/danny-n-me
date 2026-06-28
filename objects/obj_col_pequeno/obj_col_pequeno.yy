@@ -9,7 +9,10 @@
     "name":"Collidables",
     "path":"folders/Objetos/Collidables.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_collisores",
+    "path":"objects/par_collisores/par_collisores.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_parede",
+  "%Name":"par_collisores",
   "eventList":[],
   "managed":true,
-  "name":"obj_parede",
+  "name":"par_collisores",
   "overriddenProperties":[],
   "parent":{
     "name":"Collidables",
     "path":"folders/Objetos/Collidables.yy",
   },
-  "parentObjectId":{
-    "name":"par_collisores",
-    "path":"objects/par_collisores/par_collisores.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_parede",
-    "path":"sprites/spr_parede/spr_parede.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

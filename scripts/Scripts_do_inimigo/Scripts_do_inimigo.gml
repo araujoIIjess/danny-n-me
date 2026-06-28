@@ -14,12 +14,13 @@ function enemy_mudar_estado(){
 		
 		estado = enemy_perseguindo;
 	}
-	if _playerDist < slime_aggr_dist && slime_dash == false && slime_dash_cooldown <= 0{
+	if (_playerDist < slime_aggr_dist && slime_dash == false && slime_dash_cooldown <= 0){
 		//TEMPO DE DURAÇAO DO DASH
 		alarm[2] = 12;
-		slime_dash = true;
+		slime_dash = true; 
 		slime_dash_dir = point_direction(x, y, _xx, _yy);//FIXED:23/06/26
 		estado = enemy_dash;
+		//if _playerDist 
 	}
 		
 /*if slime_dash == false{
@@ -36,8 +37,8 @@ enemy_collisions();
 
 //ESTADO DE MOVIMENTO
 function enemy_collisions(){
-	if place_meeting(x + hspd , y , obj_parede){
-		while !place_meeting(x + sign(hspd) , y , obj_parede){
+	if place_meeting(x + hspd , y , par_collisores){
+		while !place_meeting(x + sign(hspd) , y , par_collisores){
 			x += sign(hspd);
 		}
 		hspd = 0;	
@@ -48,8 +49,8 @@ function enemy_collisions(){
 	}*/
 	x += hspd
 	
-	if place_meeting(x , y + vspd , obj_parede){
-		while !place_meeting(x , y + sign(vspd) , obj_parede){
+	if place_meeting(x , y + vspd , par_collisores){
+		while !place_meeting(x , y + sign(vspd) , par_collisores){
 			y += sign(vspd);
 		}
 		vspd = 0;

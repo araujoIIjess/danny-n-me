@@ -1,13 +1,13 @@
 randomise();
 
-estado = enemy_movement;
+estado = enemy_movement;//ENEMY STATE
 
 #region MOVIMENTO
 //VELOCIDADE VERTICAL E HORIZONTAL
 hspd = 0;
 vspd = 0;
 //VELOCIDADE DO SLIME -->VARIA CONFORME O TIPO<--
-slime_spd = [0.3, 0.7];
+slime_spd = [0.3, 0.7];//NERFADO EM: 28/06/26
 //COORDENADAS PARA ONDE SE VAI MOVER
 random_x = 0;
 random_y = 0;
@@ -36,11 +36,11 @@ hit_cooldown_time = [9, 5];
 //VERIFICA SE O JOGADOR ESTÁ A n PIXEIS DE DISTANCIA -->VARIA CONFORME O SLIME TYPE
 slime_aggr_dist = [300, 170]; 
 //VELOCIDADE QUANDO ESTIVER AGRESSIVO
-slime_aggr_spd = [1.7, 3];
+slime_aggr_spd = [0.5, 1];//NERFADO EM 28/06/26
 //SE ESTIVER EM DASH É TRUE, SE N ESTIVER É FALSE
 slime_dash = false;
 //VELOCIDADE E DIREÇAO DO DASHs
-slime_dash_spd = [5, 15];
+slime_dash_spd = [5, 10];//NERFADO EM 28/06/26
 slime_dash_dir = 0;
 //COOLDOWN DO DASH
 cooldown = [45, 24];
