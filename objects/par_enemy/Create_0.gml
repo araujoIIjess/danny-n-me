@@ -26,9 +26,14 @@ slime_knockDir = 0;
 hit_cooldown = false; //QUANDO ESTIVER INVULNERAVEL FICA TRUE
 //VÁRIAVEL QUE DEFINE O TEMPO DE COOLDOWN -->VARIA CONFORME O SLIME TYPE
 hit_cooldown_time = [9, 5];
-#endregion
 
-#region PERSEGUI JOGADOR
+/*STILL IN WORK -->DEATH DELAY FIX
+//QUANDO ELE ESTIVER A MORRER DYING FICA TRUE
+dying = false; //ADDED: 29/06/26
+#endregion
+*/
+
+#region PERSEGUIR JOGADOR
 //REMINDER:
 //INDEX 0: SLIME GRANDE
 //INDEX 1: SLIME PEQUENO
@@ -47,6 +52,14 @@ cooldown = [45, 24];
 slime_dash_cooldown = 0;
 #endregion
 
+#region DROPS
+//ADDED: 20/06/26
+//QUANTIDADE DE XP QUE CADA SLIME VAI DROPAR
+/*INDEX 0: BIG SLIME
+INDEX 1: TINY SLIME*/
+slime_xp_drop = [irandom_range(10, 100), irandom_range(5, 80)];
+
+#endregion
 alarm[0] = 1;
 
 

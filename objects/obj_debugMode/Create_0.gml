@@ -1,0 +1,3 @@
+//BOOL PRA SABER SE ESTAMOS EM MODO DEBUG OU NÃO
+global.debugMode = false;//ADDED 3006/26
+

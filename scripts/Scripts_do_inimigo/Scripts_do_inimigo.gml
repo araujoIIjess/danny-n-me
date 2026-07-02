@@ -1,5 +1,6 @@
 function enemy_mudar_estado(){
 	//VARIAVEL Q VAI DETERMINAR O PROXIMO ESTADO
+	#region MUDANÇA DE ESTADOS
 	var _nextState = choose(enemy_movement , enemy_idle);
 	if _nextState == enemy_movement{
 		estado = enemy_movement;
@@ -8,6 +9,7 @@ function enemy_mudar_estado(){
 	}
 	var _xx = obj_player.x;
 	var _yy = obj_player.y;
+	var _slimeHp = self.slime_hp;
 	var _playerDist = point_distance(_xx, _yy, x, y);
 	
 	if _playerDist < slime_aggr_dist{
@@ -22,7 +24,14 @@ function enemy_mudar_estado(){
 		estado = enemy_dash;
 		//if _playerDist 
 	}
-		
+	
+	//SE A VIDA DO SLIME CHEGAR A 0
+	
+	if(_slimeHp <= 0){//ADDED:29/06/26
+		//ENTRA PARA O ESTADO DE MORTE
+		estado = enemy_death;
+	}
+	#endregion
 /*if slime_dash == false{
 slime_dash = true
 alarm[2] = 10;
@@ -32,6 +41,7 @@ vspd = lengthdir_y(slime_dash_spd, _dir);
 enemy_collisions();
 		
 }*/	
+
 }
 
 
@@ -116,4 +126,12 @@ function enemy_dash(){
 	vspd = lengthdir_y(slime_dash_spd, slime_dash_dir);
 	enemy_collisions();
 	
+}
+
+function enemy_death(){//ADDED:29/06/26
+	//ANTES DE MORRER ADICIONA XP NO JOGADOR
+	/*var _playerXp = obj_player.player_xp;
+	_playerXp += 150;*/
+	instance_destroy(other);//ELE DESTROI-SE A SI MESMO
+	obj_player.player_xp += 150;	
 }

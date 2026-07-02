@@ -2,7 +2,7 @@
   "$GMTileSet":"v1",
   "%Name":"ts_grasslands",
   "autoTileSets":[
-    {"$GMAutoTileSet":"","%Name":"Relva/chão","closed_edge":false,"name":"Relva/chão","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[219,289,286,189,199,229,0,188,196,343,220,190,249,248,250,223,],},
+    {"$GMAutoTileSet":"","%Name":"Relva/chão","closed_edge":false,"name":"Relva/chão","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[404,289,286,189,199,229,403,188,196,434,220,190,249,248,250,223,],},
     {"$GMAutoTileSet":"","%Name":"Relva/água","closed_edge":false,"name":"Relva/água","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[219,470,466,373,380,410,0,372,376,0,406,375,378,462,465,408,],},
   ],
   "macroPageTiles":{

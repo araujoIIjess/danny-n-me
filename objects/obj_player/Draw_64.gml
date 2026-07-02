@@ -1,5 +1,10 @@
 //draw_text(320 , 140 , string(player_xp));
-draw_text(320, 140, "XP: " + string(player_xp));
-draw_text(320, 160, "HP: " + string(vida));
-draw_text(320, 180, "ST: " + string(stamina));
-draw_text(320, 200, "LVL: " + string(player_level));
+//SE ESTIVER EM MOOD DEBUG, EXIBE AS STATS DO PLAYER
+//DOESNT WORK
+//ADDED: 30/06/26
+var _debugMode = global.debugMode;
+if _debugMode == true{
+	show_debug_message(" ");
+}else{
+	draw_self();
+}

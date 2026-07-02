@@ -25,7 +25,8 @@ var _stamina = obj_player.stamina;
 draw_sprite_ext(spr_playerHud_stamina, 0, 0, _hudA + 24, (_stamina/_maxStamina)*_escala, _escala, 0, c_white, 1);
 
 //BARRA DE VIDA
-draw_sprite_ext(spr_playerHud_vida, 0, 0, _hudA, (_maxVida/_vida)*_escala, _escala, 0, c_white, 1);
+/*draw_sprite_ext(spr_playerHud_vida, 0, 0, _hudA, (_maxVida/_vida)*_escala, _escala, 0, c_white, 1);*/
+draw_sprite_ext(spr_playerHud_vida, 0, 0, _hudA, (_vida/_vida)*_escala, _escala, 0, c_white, 1);
 
 //HUD
 draw_sprite_ext(spr_PlayerHud, 0, 0, _hudA, _escala, _escala, 0, c_white, 1);

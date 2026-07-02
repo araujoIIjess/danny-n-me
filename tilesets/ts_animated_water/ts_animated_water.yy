@@ -36,7 +36,7 @@
     {"$GMTileAnimation":"","%Name":"animation_1","frames":[171,172,173,174,175,176,177,178,],"name":"animation_1","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"Ondas - direita c/inferior","frames":[191,192,193,194,195,196,197,198,],"name":"Ondas - direita c/inferior","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
     {"$GMTileAnimation":"","%Name":"Ondas - esquerda c/inferior","frames":[211,212,213,214,215,216,217,218,],"name":"Ondas - esquerda c/inferior","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
-    {"$GMTileAnimation":"","%Name":"animation_2","frames":[71,72,73,74,75,77,77,78,],"name":"animation_2","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"Ondas - Frente c/direita","frames":[71,72,73,74,75,77,77,78,],"name":"Ondas - Frente c/direita","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
   ],
   "tileAnimationSpeed":3.0,
   "tileHeight":16,

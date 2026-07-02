@@ -43,6 +43,7 @@
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.gm_effect_glow-1.0.0","name":"io.gamemaker.gm_effect_glow-1.0.0","path":"io.gamemaker.gm_effect_glow-1.0.0.yyp",},
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
   "IncludedFiles":[],
   "isEcma":false,
@@ -56,6 +57,7 @@
     {"id":{"name":"obj_bigSlime","path":"objects/obj_bigSlime/obj_bigSlime.yy",},},
     {"id":{"name":"obj_col_pequeno","path":"objects/obj_col_pequeno/obj_col_pequeno.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
+    {"id":{"name":"obj_debugMode","path":"objects/obj_debugMode/obj_debugMode.yy",},},
     {"id":{"name":"obj_parede","path":"objects/obj_parede/obj_parede.yy",},},
     {"id":{"name":"obj_player_dashEffect","path":"objects/obj_player_dashEffect/obj_player_dashEffect.yy",},},
     {"id":{"name":"obj_player_Globals","path":"objects/obj_player_Globals/obj_player_Globals.yy",},},
@@ -66,6 +68,7 @@
     {"id":{"name":"par_enemy","path":"objects/par_enemy/par_enemy.yy",},},
     {"id":{"name":"main_room","path":"rooms/main_room/main_room.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"second_level","path":"rooms/second_level/second_level.yy",},},
     {"id":{"name":"tiletest_room","path":"rooms/tiletest_room/tiletest_room.yy",},},
     {"id":{"name":"AnimationEnd","path":"scripts/AnimationEnd/AnimationEnd.yy",},},
     {"id":{"name":"HitboxCreate","path":"scripts/HitboxCreate/HitboxCreate.yy",},},
@@ -112,6 +115,7 @@
     {"roomId":{"name":"main_room","path":"rooms/main_room/main_room.yy",},},
     {"roomId":{"name":"tiletest_room","path":"rooms/tiletest_room/tiletest_room.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"second_level","path":"rooms/second_level/second_level.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -2,7 +2,7 @@ estado();
 //SISTEMA DE POWER-UP
 //POR AGORA AS QUANTIDADES DE XP PRA SUBIR DE NIVEL SERÃO FIXAS
 //NVL 1 -> NVL 2 -> 100xp
-if player_level < 5{
+/*if player_level < 5{
 	if(player_xp >= player_next_level[player_level]){
 		//SE O XP ATUAL FOR MAIORR OU IGUAL AO NECESSARIO PRA PASSAR DE NÍVEL
 		//ELE PASSA DE NÍVEL
@@ -11,11 +11,11 @@ if player_level < 5{
 		//A STAMINA AUMENTA
 		/*stamina = max_stamina[level];
 		//A VIDA TAMBEM AUMENTA
-		vida = max_vida[level];*/
+		vida = max_vida[level];
 		
 	}
 }
-show_debug_message(string(player_xp));
+show_debug_message(string(player_xp));*/
 //SE O alarm[1] TERMINAR ELE REGENERA A STAMINA
 if alarm[1] <= 0{
 

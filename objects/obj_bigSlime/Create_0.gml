@@ -16,6 +16,8 @@ slime_dash_cooldown = cooldown[index];
 slime_dash_spd = slime_dash_spd[index];
 //TEMPO DE COOLDOWN APÓS O HIT
 hit_cooldown_time = hit_cooldown_time[index];
+//SISTEMA DE DROPS DE XP DO BIG SLIME
+slime_xp_drop = slime_xp_drop[index];
 
 
 

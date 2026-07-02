@@ -53,7 +53,7 @@ function SpriteChange(_canAttack = false){
 	
 	//_mouseDir VAI PEGAR A DIRECÇAO DO CURSOR DO MOUSE E CONVERTE-LA PARA 4 DIRECÇOES
 	//var _mouseDir = floor((point_direction(_playerX, _playerY, mouse_x, mouse_y)+45)/90) mod 4;
-	
+
 	//MUDANÇA DE SPRITES
 	if _playerHspd == 0 && _playerVspd == 0{
 		

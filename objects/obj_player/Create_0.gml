@@ -55,8 +55,6 @@ player_atkDmg = max_atk[player_level];
 
 #endregion
 
-
-
 #endregion
 
 

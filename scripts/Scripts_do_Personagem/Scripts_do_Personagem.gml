@@ -35,6 +35,11 @@ function player_movimento(){
 	var _playerX = obj_player.x;
 	var _playerY = obj_player.y;
 	mouseDir = MOUSEDIR; //global.mouseDir; //floor((point_direction(x , y , mouse_x , mouse_y)/90)/45);
+	#region STATS
+	var _playerLevel = obj_player.player_level;
+	var _playerXp = obj_player.player_xp;
+	var _playernextlevel = obj_player.player_next_level;
+	#endregion
 	#endregion
 
 	#region MOVIMENTO
@@ -101,6 +106,16 @@ function player_movimento(){
 	 } else SpriteChange(false);
 	
 	#endregion
+	
+	//ENQUANTO O NIVEL FOR MENOR QUE 5 PODE SUBIR DE NIVEL
+	if(_playerLevel < 5){
+		//SE O XP QUE ELE GANHAR AO MATAR O INIMIGO FOR MAIOR OU IGUAL AO EXIGIDO PARA O PROXIMO NÍVEL
+		if(_playerXp >= _playernextlevel[_playerLevel]){
+			//_playerXp = _playernextlevel[_playerLevel] - _playerXp;
+			//SOBE DE NÍVEL
+			//estado = player_levelUp;
+		}
+	}
 }
 
 
@@ -147,3 +162,19 @@ function player_hit(){
 	vspd = lengthdir_y(player_knockback_spd, player_knockback_dir);
 	player_colisao();
 }
+	
+function player_levelUp(){
+	//SE HOUVE SUBIDA DE LEVEL EXECUTA ESTE ESTADO
+	var _playerLevel = obj_player.player_level;
+	var _playerMaxhp = obj_player.max_vida;
+	var _playerHp = obj_player.vida;
+	var _playerMaxst = obj_player.max_stamina;
+	var _playerSt = obj_player.stamina;
+	//EXECUTA O AUMENTO DAS STATS
+		//SÓ EXECUTA O AUMENTO DAS STATS SE FOR TRUE
+		_playerLevel += 1;
+		_playerSt = _playerMaxst[_playerLevel];
+		_playerHp = _playerMaxhp = _playerMaxhp[_playerLevel];
+}
+	
+	
